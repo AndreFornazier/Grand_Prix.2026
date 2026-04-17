@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LiftVision Control | Containers</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="containers">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <div class="brand-icon">⚙️</div>
+      <div>
+        <h1>LiftVision</h1>
+        <p>Control</p>
+      </div>
+    </div>
+
+    <nav class="nav-menu">
+      <a href="index.html" class="nav-link">Início</a>
+      <a href="dashboard.html" class="nav-link">Dashboard</a>
+      <a href="produtos.html" class="nav-link">Produtos</a>
+      <a href="containers.html" class="nav-link active">Containers</a>
+      <a href="fotos.html" class="nav-link">Fotos</a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <p>Rastreamento operacional de cargas</p>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <header class="topbar">
+      <button class="menu-toggle" id="menuToggle">☰</button>
+      <div>
+        <h2>Containers Monitorados</h2>
+        <p>Lista detalhada por operação e inspeção</p>
+      </div>
+      <div class="topbar-badge">Base Operacional</div>
+    </header>
+
+    <section class="content-section">
+      <div class="section-header">
+        <h2>Consulta Detalhada</h2>
+        <p>Busca e filtros por status operacional</p>
+      </div>
+
+      <div class="toolbar toolbar-wrap">
+        <input
+          type="text"
+          id="containerSearch"
+          class="search-input"
+          placeholder="Buscar por ID, tipo, local, pasta ou horário..."
+        />
+
+        <div class="filter-group">
+          <button class="filter-btn active" data-filter="todos">Todos</button>
+          <button class="filter-btn" data-filter="liberado">Liberado</button>
+          <button class="filter-btn" data-filter="alerta">Alerta</button>
+          <button class="filter-btn" data-filter="em análise">Em análise</button>
+        </div>
+      </div>
+
+      <div class="table-wrapper">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Tipo da Carga</th>
+              <th>Local</th>
+              <th>Horário</th>
+              <th>Pasta Associada</th>
+              <th>Qtd. Fotos</th>
+              <th>Status</th>
+              <th>Confiança IA</th>
+            </tr>
+          </thead>
+          <tbody id="containersTableBody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

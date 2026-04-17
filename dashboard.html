@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LiftVision Control | Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="dashboard">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <div class="brand-icon">⚙️</div>
+      <div>
+        <h1>LiftVision</h1>
+        <p>Control</p>
+      </div>
+    </div>
+
+    <nav class="nav-menu">
+      <a href="index.html" class="nav-link">Início</a>
+      <a href="dashboard.html" class="nav-link active">Dashboard</a>
+      <a href="produtos.html" class="nav-link">Produtos</a>
+      <a href="containers.html" class="nav-link">Containers</a>
+      <a href="fotos.html" class="nav-link">Fotos</a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <p>Centro de operação e inspeção</p>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <header class="topbar">
+      <button class="menu-toggle" id="menuToggle">☰</button>
+      <div>
+        <h2>Dashboard Operacional</h2>
+        <p>Painel geral das inspeções do turno</p>
+      </div>
+      <div class="topbar-badge">Turno A</div>
+    </header>
+
+    <!-- Indicadores -->
+    <section class="cards-grid stats-grid" id="dashboardStats"></section>
+
+    <!-- Busca -->
+    <section class="content-section">
+      <div class="section-header">
+        <h2>Status em Tempo Real</h2>
+        <p>Consulta de containers monitorados</p>
+      </div>
+
+      <div class="toolbar">
+        <input
+          type="text"
+          id="dashboardSearch"
+          class="search-input"
+          placeholder="Buscar por código, local, tipo ou status..."
+        />
+      </div>
+
+      <div class="table-wrapper">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Código</th>
+              <th>Tipo</th>
+              <th>Horário</th>
+              <th>Local</th>
+              <th>Inspeção</th>
+              <th>Eslinga</th>
+              <th>Manilha</th>
+              <th>Cinta</th>
+              <th>Confiança IA</th>
+            </tr>
+          </thead>
+          <tbody id="dashboardTableBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Fluxo da IA -->
+    <section class="content-section">
+      <div class="section-header">
+        <h2>Fluxo da Inteligência Artificial</h2>
+        <p>Etapas da inspeção automatizada</p>
+      </div>
+
+      <div class="flow-grid">
+        <div class="flow-card">
+          <span class="flow-number">01</span>
+          <h3>Captura Visual</h3>
+          <p>Câmeras e drone coletam imagens do conjunto de içamento e da carga.</p>
+        </div>
+
+        <div class="flow-card">
+          <span class="flow-number">02</span>
+          <h3>Detecção Automática</h3>
+          <p>A IA identifica eslingas, manilhas, cintas e pontos críticos da operação.</p>
+        </div>
+
+        <div class="flow-card">
+          <span class="flow-number">03</span>
+          <h3>Validação de Segurança</h3>
+          <p>O sistema compara o estado detectado com critérios mínimos de segurança.</p>
+        </div>
+
+        <div class="flow-card">
+          <span class="flow-number">04</span>
+          <h3>Registro e Rastreio</h3>
+          <p>As evidências são arquivadas por container, horário, local e resultado.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
